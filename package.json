@@ -1,8 +1,8 @@
 {
-  "name": "proposalforge-ai",
+  "name": "upwork-proposal-generator-ai",
   "version": "0.1.0",
   "private": true,
-  "description": "A clean portfolio demo for generating client-first Upwork proposals.",
+  "description": "A portfolio-ready AI Upwork proposal generator with scoring, variants, guardrails, templates, and mock history.",
   "scripts": {
     "check": "node tools/quality-check.mjs"
   }

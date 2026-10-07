@@ -2,6 +2,9 @@ const form = document.querySelector("#proposalForm");
 const output = document.querySelector("#proposalOutput");
 const score = document.querySelector("#score");
 const copyButton = document.querySelector("#copyButton");
+const qualityList = document.querySelector("#qualityList");
+const variantList = document.querySelector("#variantList");
+const historyList = document.querySelector("#historyList");
 
 function clean(value) {
   return String(value || "").trim();
@@ -54,6 +57,38 @@ function buildProposal(fields) {
   ].join("\n");
 }
 
+function buildChecklist(fields) {
+  return [
+    {
+      label: "Starts with the client's problem",
+      done: fields.jobBrief.length > 80
+    },
+    {
+      label: "Includes relevant proof",
+      done: fields.proof.length > 18
+    },
+    {
+      label: "Uses a specific next question",
+      done: fields.cta.endsWith("?")
+    },
+    {
+      label: "Avoids generic opener language",
+      done: !/dear hiring manager/i.test(fields.jobBrief)
+    },
+    {
+      label: "Fits a readable first-message structure",
+      done: fields.service.length > 8
+    }
+  ];
+}
+
+function buildVariants(fields) {
+  return ["direct", "consultative", "friendly"].map((tone) => ({
+    tone,
+    preview: `${toneLead(tone)} ${firstSentence(fields.jobBrief)}.`
+  }));
+}
+
 function readFields() {
   return {
     jobTitle: clean(form.jobTitle.value),
@@ -69,6 +104,12 @@ function render() {
   const fields = readFields();
   output.textContent = buildProposal(fields);
   score.textContent = calculateScore(fields);
+  qualityList.innerHTML = buildChecklist(fields)
+    .map((item) => `<li>${item.done ? "Pass" : "Improve"}: ${item.label}</li>`)
+    .join("");
+  variantList.innerHTML = buildVariants(fields)
+    .map((item) => `<div><strong>${item.tone}</strong><br>${item.preview}</div>`)
+    .join("");
 }
 
 form.addEventListener("submit", (event) => {
@@ -85,3 +126,12 @@ copyButton.addEventListener("click", async () => {
 });
 
 render();
+
+historyList.innerHTML = [
+  ["SaaS landing page", "Score 92", "Reply pending"],
+  ["Automation workflow", "Score 88", "Client replied"],
+  ["WordPress rebuild", "Score 95", "Won"],
+  ["SEO content sprint", "Score 84", "No response"]
+]
+  .map(([title, quality, outcome]) => `<div><strong>${title}</strong><br>${quality} · ${outcome}</div>`)
+  .join("");

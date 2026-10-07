@@ -93,6 +93,80 @@ h1 {
   gap: 20px;
 }
 
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.feature-grid article,
+.feature-band {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  padding: 18px;
+  box-shadow: 0 18px 50px rgba(31, 41, 51, 0.06);
+}
+
+.feature-grid h2,
+.feature-band h2 {
+  margin: 0 0 12px;
+  font-size: 20px;
+}
+
+.feature-grid ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.stack-list {
+  display: grid;
+  gap: 10px;
+}
+
+.stack-list div,
+.outcome-grid span,
+.template-tags span {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 10px;
+  background: #fffdf9;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.outcome-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.outcome-grid strong {
+  display: block;
+  color: var(--ink);
+  font-size: 22px;
+}
+
+.feature-band {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 20px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.template-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 .builder,
 .output-card {
   padding: 20px;
@@ -175,6 +249,8 @@ pre {
 @media (max-width: 860px) {
   .hero,
   .workspace,
+  .feature-grid,
+  .feature-band,
   .grid-two {
     grid-template-columns: 1fr;
   }

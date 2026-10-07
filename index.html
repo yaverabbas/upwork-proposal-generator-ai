@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ProposalForge AI</title>
+    <title>Upwork Proposal Generator AI</title>
     <meta
       name="description"
-      content="A clean portfolio demo for generating client-first Upwork proposals."
+      content="An AI Upwork proposal generator demo with scoring, guardrails, variants, and proposal history."
     >
     <link rel="stylesheet" href="./styles.css">
   </head>
@@ -52,7 +52,7 @@
           <div class="grid-two">
             <label>
               Tone
-              <select id="tone" name="tone">
+            <select id="tone" name="tone">
                 <option value="direct">Direct</option>
                 <option value="consultative">Consultative</option>
                 <option value="friendly">Friendly</option>
@@ -74,6 +74,48 @@
           </div>
           <pre id="proposalOutput"></pre>
         </aside>
+      </section>
+
+      <section class="feature-grid" aria-label="Proposal generator features">
+        <article>
+          <p class="eyebrow">Guardrails</p>
+          <h2>Quality checklist</h2>
+          <ul id="qualityList"></ul>
+        </article>
+        <article>
+          <p class="eyebrow">Variants</p>
+          <h2>Tone options</h2>
+          <div id="variantList" class="stack-list"></div>
+        </article>
+        <article>
+          <p class="eyebrow">History</p>
+          <h2>Recent proposals</h2>
+          <div id="historyList" class="stack-list"></div>
+        </article>
+        <article>
+          <p class="eyebrow">Outcomes</p>
+          <h2>Feedback loop</h2>
+          <div class="outcome-grid">
+            <span><strong>12</strong> sent</span>
+            <span><strong>4</strong> replies</span>
+            <span><strong>2</strong> won</span>
+          </div>
+        </article>
+      </section>
+
+      <section class="feature-band">
+        <div>
+          <p class="eyebrow">Template library</p>
+          <h2>Reusable proposal sections for common freelance services.</h2>
+        </div>
+        <div class="template-tags">
+          <span>Web development</span>
+          <span>SaaS landing pages</span>
+          <span>SEO content</span>
+          <span>Automation</span>
+          <span>WordPress</span>
+          <span>Design systems</span>
+        </div>
       </section>
     </main>
     <script src="./script.js"></script>
