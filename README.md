@@ -4,6 +4,10 @@ An open-source, portfolio-ready **AI Upwork proposal generator** for freelancers
 
 This repository is intentionally clean and generic. It is not connected to any private production product, private database, payment account, or internal system.
 
+## Preview
+
+![Upwork Proposal Generator AI desktop preview](screenshots/desktop-preview.jpg)
+
 ## Feature Coverage
 
 - AI-style Upwork proposal generator UI
