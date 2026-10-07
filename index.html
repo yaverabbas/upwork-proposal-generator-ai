@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ProposalForge AI</title>
+    <meta
+      name="description"
+      content="A clean portfolio demo for generating client-first Upwork proposals."
+    >
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Proposal generator demo</p>
+          <h1>Turn a job brief into a focused first message.</h1>
+          <p class="hero-copy">
+            Paste the client request, add your service context, and generate a concise proposal that starts with the client's problem.
+          </p>
+        </div>
+        <div class="hero-panel">
+          <span class="metric-value" id="score">86</span>
+          <span class="metric-label">draft score</span>
+        </div>
+      </section>
+
+      <section class="workspace" aria-label="Proposal workspace">
+        <form class="builder" id="proposalForm">
+          <label>
+            Job title
+            <input id="jobTitle" name="jobTitle" value="Build a landing page for a SaaS product">
+          </label>
+
+          <label>
+            Client brief
+            <textarea id="jobBrief" name="jobBrief" rows="8">We need a clean landing page that explains our product, captures leads, and looks credible for B2B buyers. Please share relevant SaaS examples and your approach.</textarea>
+          </label>
+
+          <div class="grid-two">
+            <label>
+              Your service
+              <input id="service" name="service" value="Next.js SaaS landing pages">
+            </label>
+            <label>
+              Relevant proof
+              <input id="proof" name="proof" value="built conversion-focused pages with analytics and lead capture">
+            </label>
+          </div>
+
+          <div class="grid-two">
+            <label>
+              Tone
+              <select id="tone" name="tone">
+                <option value="direct">Direct</option>
+                <option value="consultative">Consultative</option>
+                <option value="friendly">Friendly</option>
+              </select>
+            </label>
+            <label>
+              Call to action
+              <input id="cta" name="cta" value="Which buyer segment should the first version target?">
+            </label>
+          </div>
+
+          <button type="submit">Generate draft</button>
+        </form>
+
+        <aside class="output-card" aria-live="polite">
+          <div class="output-header">
+            <p class="eyebrow">Generated draft</p>
+            <button class="ghost" id="copyButton" type="button">Copy</button>
+          </div>
+          <pre id="proposalOutput"></pre>
+        </aside>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
