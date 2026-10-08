@@ -35,6 +35,29 @@ This repository is intentionally clean and generic. It is not connected to any p
 - Outcome tracker
 - Template library preview
 
+## Need a Custom Version?
+
+This template is a public demo. If you need a proposal generator for a real freelance team, agency, marketplace, sales workflow, or SaaS product, the same structure can be expanded into a production-ready tool.
+
+Custom build options can include:
+
+- User accounts and saved proposal history
+- Real proposal scoring rules
+- Custom proposal templates for your niche
+- Client brief intake forms
+- Team workspaces
+- Usage limits and billing
+- Admin review dashboard
+- CRM or spreadsheet export
+- API integration with your existing workflow
+
+If you are planning a SaaS tool, client portal, proposal workflow, automation system, or dashboard product, connect with me on LinkedIn: [Yaver Abbas](https://www.linkedin.com/in/yawarak/).
+
+## Related Open Source Templates
+
+- [SaaS Member Dashboard Template](https://github.com/yaverabbas/saas-member-dashboard-template)
+- [SaaS Admin Dashboard Template](https://github.com/yaverabbas/saas-admin-dashboard-template)
+
 ## Deployment Guide
 
 This demo is static HTML, CSS, and JavaScript. You can deploy it almost anywhere.
