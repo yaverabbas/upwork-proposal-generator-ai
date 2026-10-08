@@ -6,6 +6,8 @@ This repository is intentionally clean and generic. It is not connected to any p
 
 ## Preview
 
+Live demo: [https://yaverabbas.github.io/upwork-proposal-generator-ai/](https://yaverabbas.github.io/upwork-proposal-generator-ai/)
+
 ![Upwork Proposal Generator AI desktop preview](screenshots/desktop-preview.jpg)
 
 ## Feature Coverage
